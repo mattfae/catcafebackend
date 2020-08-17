@@ -1,6 +1,6 @@
 class CatBreedSponsorship < ApplicationRecord
 
-    def index
-    end
+    belongs_to :patron
+    belongs_to :cat_breed
     
 end

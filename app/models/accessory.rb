@@ -1,6 +1,6 @@
 class Accessory < ApplicationRecord
 
-    def index
-    end
-    
+    has_many :accessory_sponsorships
+    has_many :patrons, through: :accessory_sponsorships
+
 end
