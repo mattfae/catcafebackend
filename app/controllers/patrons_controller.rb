@@ -7,7 +7,13 @@ class PatronsController < ApplicationController
 
     def show
         patron = Patron.find(params[:id])
+        cbs = patron.cat_breed_sponsorships
+        # patron[:cbs] = cbs
         render json: patron
     end
+
+
+    #CatBreedSponsorships
+
 
 end
