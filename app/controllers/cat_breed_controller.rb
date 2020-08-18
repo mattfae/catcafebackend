@@ -1,2 +1,0 @@
-class CatBreedController < ApplicationController
-end

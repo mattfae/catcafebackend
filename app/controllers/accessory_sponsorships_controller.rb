@@ -1,0 +1,2 @@
+class AccessorySponsorshipsController < ApplicationController
+end
