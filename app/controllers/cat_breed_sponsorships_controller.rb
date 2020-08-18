@@ -1,0 +1,2 @@
+class CatBreedSponsorshipsController < ApplicationController
+end

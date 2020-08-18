@@ -1,2 +1,0 @@
-class AccessorySponsorshipController < ApplicationController
-end
