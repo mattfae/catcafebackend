@@ -21,21 +21,21 @@ CatBreedSponsorship.delete_all
 end
 
 # Patrons
-100.times do
+20.times do
     name = Faker::Name.name
     Patron.create(name: name)
     # note: do we want to have first name and last name? Username instead?
 end
 
 # Accessories
-50.times do
+20.times do
     product_name = Faker::Commerce.product_name
     Accessory.create(name: product_name)
     #this is as good as i could find. also could be funny.
 end
 
 # Accessory Sponsorship
-20.times do
+100.times do
     amount = rand(5..100)
     sample_patron = Patron.all.sample.id
     sample_accessory = Accessory.all.sample.id
@@ -43,9 +43,9 @@ end
 end
 
 # Cat Breed Sponsorship 
-20.times do
+100.times do
     amount = rand(5..100)
     sample_patron = Patron.all.sample.id
     sample_breed = CatBreed.all.sample.id
-    CatBreedSponsorship.create(amount: amount, patron_id: sample_patron, catbreed_id: sample_breed)
+    CatBreedSponsorship.create(amount: amount, patron_id: sample_patron, cat_breed_id: sample_breed)
 end
