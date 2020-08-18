@@ -46,6 +46,6 @@ end
 20.times do
     amount = rand(5..100)
     sample_patron = Patron.all.sample.id
-    sample_catbreed = CatBreed.all.sample.id
-    CatBreedSponsorship.create(amount: amount, patron_id: sample_patron, catbreed_id: sample_catbreed)
+    sample_breed = CatBreed.all.sample.id
+    CatBreedSponsorship.create(amount: amount, patron_id: sample_patron, catbreed_id: sample_breed)
 end
