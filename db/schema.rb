@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 2020_08_17_201414) do
 
   create_table "cat_breed_sponsorships", force: :cascade do |t|
     t.integer "patron_id"
-    t.integer "catbreed_id"
+    t.integer "cat_breed_id"
     t.integer "amount"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
