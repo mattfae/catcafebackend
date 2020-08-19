@@ -16,6 +16,11 @@ class CatBreedSponsorshipsController < ApplicationController
         render json: catBreedSponsorship
     end
 
+    def destroy
+        catBreedSponsorship = CatBreedSponsorship.find(params[:id])
+        catBreedSponsorship.delete
+    end
+    
 
     private
 
