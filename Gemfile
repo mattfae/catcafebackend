@@ -5,6 +5,7 @@ ruby '2.6.1'
 
 gem 'faker'
 gem 'rack-cors'
+gem 'active_model_serializers'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.2'

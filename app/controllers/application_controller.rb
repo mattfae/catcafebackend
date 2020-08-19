@@ -1,2 +1,3 @@
-class ApplicationController < ActionController::Base
+class ApplicationController < ActionController::API
+    # needs API flag instead of Base
 end
