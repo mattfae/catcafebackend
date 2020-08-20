@@ -10,9 +10,14 @@ class CatBreedSponsorshipsController < ApplicationController
         render json: catBreedSponsorship
     end
 
+    def create
+        catBreedSponsorship = CatBreedSponsorship.create(cbs_params)
+        render json: catBreedSponsorship
+    end
+
     def update
         catBreedSponsorship = CatBreedSponsorship.find(params[:id])
-        catBreedSponsorship.update(cat_breed_sponsorship_params)
+        catBreedSponsorship.update(cbs_params)
         render json: catBreedSponsorship
     end
 
@@ -24,8 +29,8 @@ class CatBreedSponsorshipsController < ApplicationController
 
     private
 
-    def cat_breed_sponsorship_params
-        params.require(:cat_breed_sponsorship).permit(:amount)
+    def cbs_params
+        params.require(:cat_breed_sponsorship).permit(:amount, :patron_id, :cat_breed_id)
     end
 
 end
