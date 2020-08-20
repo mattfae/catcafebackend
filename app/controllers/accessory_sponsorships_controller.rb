@@ -7,13 +7,18 @@ class AccessorySponsorshipsController < ApplicationController
 
     def show
         accessory_sponsorship = AccessorySponsorship.find(params[:id])
-        render json: accessory_sponsorship
+        render json: accsSponsorship
+    end
+
+    def create
+        accessory = Accessory.create(accs_params)
+        render json: accsSponsorship
     end
 
     def update
         accessory_sponsorship = AccessorySponsorship.find(params[:id])
-        accessory_sponsorship.update(accessory_sponsorship_params)
-        render json: accessory_sponsorship
+        accessory_sponsorship.update(accs_params)
+        render json: accsSponsorship
     end
 
     def destroy
@@ -23,7 +28,7 @@ class AccessorySponsorshipsController < ApplicationController
 
     private
 
-    def accessory_sponsorship_params
+    def accs_params
         params.require(:accessory_sponsorship).permit(:amount)
     end
 
